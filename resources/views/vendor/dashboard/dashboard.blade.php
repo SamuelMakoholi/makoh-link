@@ -52,6 +52,8 @@
                 </div>
               </div>
 
+              {{ Auth::user()->role }}
+
             </div>
           </div>
         </div>

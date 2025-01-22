@@ -29,14 +29,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        dd($request->user()->role);
+
         //checking user role and redirect to specific dashboards
-        if($request->user()->role === 'admin'){
+        if($request->user()->hasRole('admin')){
 
             return redirect()->intended('/admin/dashboard');
 
-        }elseif($request->user()->role === 'vendor'){
-
+        }elseif($request->user()->hasRole('vendor')){
 
             return redirect()->intended('/vendor/dashboard');
         }
