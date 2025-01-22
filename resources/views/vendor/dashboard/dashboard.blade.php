@@ -13,6 +13,7 @@
         <div class="col-xl-9 col-xxl-10 col-lg-9 ms-auto">
           <div class="dashboard_content">
             <div class="wsus__dashboard">
+               <h1> {{ $message }}</h1>
               <div class="row">
                 <div class="col-xl-2 col-6 col-md-4">
                   <a class="wsus__dashboard_item red" href="dsahboard_order.html">

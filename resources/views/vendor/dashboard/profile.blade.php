@@ -49,11 +49,35 @@
                                             </div>
                                         </div>
 
+                                        <div class="col-md-12">
+                                            <div class="wsus__dash_pro_single">
+                                                <i class="fas fa-user-tie"></i>
+                                                <input type="text" placeholder="Phone" name="phone"
+                                                    value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="wsus__dash_pro_single">
+                                                <i class="fas fa-user-tie"></i>
+                                                <input type="text" placeholder="National ID" name="national_id"
+                                                    value="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="wsus__dash_pro_single">
+                                                <i class="fas fa-user-tie"></i>
+                                                <input type="text" placeholder="Address" name="address"
+                                                    value="">
+                                            </div>
+                                        </div>
+
                                     </div>
 
 
                                     <div class="col-xl-12">
-                                        <button class="common_btn mb-4 mt-2" type="submit">upload</button>
+                                        <button class="common_btn mb-4 mt-2" type="submit">Update</button>
                                     </div>
 
                                 </form>
@@ -88,7 +112,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-xl-12">
-                                                <button class="common_btn" type="submit">upload</button>
+                                                <button class="common_btn" type="submit">Update</button>
                                             </div>
                                         </div>
 

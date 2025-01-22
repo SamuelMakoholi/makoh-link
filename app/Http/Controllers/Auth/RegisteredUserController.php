@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\ProfileStatus;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -44,9 +45,23 @@ class RegisteredUserController extends Controller
 
         $user->addRole('vendor');
 
+        $profile = new ProfileStatus();
+        $profile->user_id = $user->id;
+        $profile->status = 0;
+        $profile->save();
+
         event(new Registered($user));
 
         Auth::login($user);
+
+        if($request->user()->hasRole('admin')){
+
+            return redirect()->intended('/admin/dashboard');
+
+        }elseif($request->user()->hasRole('vendor')){
+
+            return redirect()->intended('/vendor/dashboard');
+        }
 
         return redirect(RouteServiceProvider::HOME);
     }
