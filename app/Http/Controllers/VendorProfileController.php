@@ -42,9 +42,9 @@ class VendorProfileController extends Controller
             ]
         );
 
-        $profile = ProfileStatus::where('user_id', $user->id)->first();
-        $profile->status = 1;
-        $profile->save();
+        // $profile = ProfileStatus::where('user_id', $user->id)->first();
+        // $profile->status = 1;
+        // $profile->save();
 
 
 

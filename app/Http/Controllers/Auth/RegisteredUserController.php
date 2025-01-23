@@ -45,10 +45,10 @@ class RegisteredUserController extends Controller
 
         $user->addRole('vendor');
 
-        $profile = new ProfileStatus();
-        $profile->user_id = $user->id;
-        $profile->status = 0;
-        $profile->save();
+        // $profile = new ProfileStatus();
+        // $profile->user_id = $user->id;
+        // $profile->status = 0;
+        // $profile->save();
 
         event(new Registered($user));
 
